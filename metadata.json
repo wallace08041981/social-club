@@ -1,0 +1,7 @@
+{
+  "name": "Social Club - The Ultimate Nightlife Network",
+  "description": "The ultimate nightlife social network. Discover upcoming events, view interactive maps of clubs, manage your guest lists and tickets, and share stories with friends.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

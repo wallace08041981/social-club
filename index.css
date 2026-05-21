@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scan {
+  from { transform: translateY(-10vh); }
+  to { transform: translateY(110vh); }
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes ping-custom {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-ping-slow {
+  animation: ping-custom 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(0.1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.animate-radar {
+  animation: radar-pulse 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.map-tiles-night {
+    filter: grayscale(1) contrast(1.6) brightness(1.2) !important;
+}
+
+.leaflet-container {
+    background: #050505 !important;
+}
+
+/* Enhancing road and label visibility for Noir & Gris style */
+.leaflet-tile {
+    filter: sepia(0.2) contrast(1.1) !important;
+}
+
+/* Hide leaflet branding */
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+/* Custom shadow for addictive UI */
+.shadow-pulse {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
